@@ -1,0 +1,45 @@
+query doo {
+  apple: company(id: "1") {
+    id
+    name
+    users {
+      id
+      firstName
+    }
+  }
+  google: company(id: "2") {
+    id
+    name
+    users {
+      id
+      firstName
+      company {
+        id
+        name
+        description
+      }
+    }
+  }
+}
+
+mutation foo {
+  addUser(firstName: "joe", age: 26) {
+    id
+    firstName
+    age
+  }
+}
+
+mutation del {
+  deleteUser(id:"88hpSwd") {
+    firstName
+  }
+}
+
+mutation edit {
+  editUser(id: "23", firstName:"Billyy") {
+    id,
+    firstName,
+    age
+  }
+}
