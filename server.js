@@ -1,3 +1,6 @@
+// basic express, graphql on the server side
+// graphql schemas, nodemon
+// json-server (see json:server in package.json and db.json)
 const express = require('express');
 const expressGraphQL = require('express-graphql');
 const schema = require('./schema/schema');
